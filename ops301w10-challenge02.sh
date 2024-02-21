@@ -2,7 +2,7 @@
 
 # Script Name: ops301w10-challenge02.sh
 # Author: Justin Patterson
-# Date of latest revision:      02/20/2024
+# Date of latest revision: 02/20/2024
 # Purpose: Append; Date and Time
 
 # Print timestamped echo statement indicating script start
