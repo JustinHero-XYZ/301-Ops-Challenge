@@ -1,5 +1,6 @@
 # Author: Justin Patterson
 # Date last revised: 03/03/2024
+# Ops Challenge #: Seattle-Ops-301w10 Ops Challenge 06
 # Purpose: Execute Bash Commands with Python
 # Script: bash_commands_ops301w10.py
 
