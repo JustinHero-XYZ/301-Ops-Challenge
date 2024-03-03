@@ -1,3 +1,8 @@
+# Author: Justin Patterson
+# Date last revised: 03/03/2024
+# Purpose: Execute Bash Commands with Python
+# Why: To Learn A New Language
+
 import os
 
 # Declare and reference variables
