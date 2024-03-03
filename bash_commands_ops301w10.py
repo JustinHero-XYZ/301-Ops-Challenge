@@ -1,7 +1,7 @@
 # Author: Justin Patterson
 # Date last revised: 03/03/2024
 # Purpose: Execute Bash Commands with Python
-# Why: To Learn A New Language
+# Script: bash_commands_ops301w10.py
 
 import os
 
