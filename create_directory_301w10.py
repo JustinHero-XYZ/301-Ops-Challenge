@@ -1,19 +1,37 @@
-# Author: Justin Patterson
+#!/usr/bin/env python3
+
+# Author:
 # Date last revised:
-# Ops Challenge #: Seattle-Ops-301w10 Ops Challenge 07
-# Purpose: Create Directory using Python
-# Script Name: create_directory_301w10.py
+# Ops Challenge #:  
+# Purpose:
+# Script Name:
 
-# Variables
+# Import libraries
 
-# Input
+import os
 
-# Output
+# Declaration of variables
+user_input = input("Enter the directory path: ")
 
-# Imports
+# Declaration of functions
+def generate_directory_info(user_path):
+    """
+    Function to generate directory information using os.walk().
 
-# Bash Things in Python
+    Args:
+    user_path (str): The user-provided directory path.
+    """
+    for (root, dirs, files) in os.walk(user_path):
+        print("==root==")
+        print(root)
+        print("==dirs==")
+        print(dirs)
+        print("==files==")
+        print(files)
 
-# Functions
+# Main
+if __name__=="__main__":
+    # Pass the variable into the function here
+    generate_directory_info(user_input)
 
-# Stretch:
+# End
