@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
-# Author:
-# Date last revised:
-# Ops Challenge #:  
-# Purpose:
-# Script Name:
+# Author: Justin Patterson
+# Date last revised: 03/04/2024
+# Ops Challenge #: Seattle-Ops-301w10 Challenge 07
+# Purpose: Generate directory information for a user-provided directory path.
+# Script Name: dir_info_gen_301w10.py
 
 # Import libraries
 
