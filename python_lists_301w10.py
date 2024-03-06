@@ -22,6 +22,9 @@ my_list = ["apple", "banana", "orange", "grape", "kiwi", "pear", "peach", "plum"
 
 # Main
 
+### Print list
+print("Entire list:", my_list)
+
 ### Print the fourth element of the list
 print("Fourth element:", my_list[3])
 
