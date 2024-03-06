@@ -26,7 +26,7 @@ my_list = ["apple", "banana", "orange", "grape", "kiwi", "pear", "peach", "plum"
 print("Fourth element:", my_list[3])
 
 ### Print the sixth element of the list
-print("Sixth through tenth elements:", my_list[5])
+print("Sixth through tenth elements:", my_list[5:])
 
 ### Change the value of the seventh element to "onion"
 my_list[6] = "onion"
