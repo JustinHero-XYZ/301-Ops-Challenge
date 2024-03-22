@@ -1,10 +1,10 @@
-# Ops-Challenge-301w10
+# Ops-Challenge-301d12
 
-#Ops challenges are located in the 301-Ops-Challenge Wiki!
+# Ops challenges are located in the 301-Ops-Challenge Wiki!
 
-#Bash Template
+# Bash Template
 
-#!/bin/bash
+# !/bin/bash
 
 # Script Name:                  Script Name
 # Author:                       Your Name
