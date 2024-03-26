@@ -1,8 +1,8 @@
 #1/bin/bash
 
-# Script Name: permissions.sh
+# Script Name: permissions_301d12.sh
 # Author: Justin Patterson
-# Date of latest revision: 02/22/2024
+# Date of latest revision: 03/26/2024
 # Purpose: change permissions
 
 # Prompt user for input directory path
