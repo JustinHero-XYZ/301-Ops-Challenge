@@ -5,50 +5,38 @@
 # Date of latest revision: 02/27/2024
 # Purpose: Clearing Logs
 
-# Print original file sizes
-echo "Original file sizes before compression:"
-echo "Size of /var/log/syslog:"
-du -h /var/log/syslog
-echo "Size of /var/log/wtmp:"
-du -h /var/log/wtmp
+# Prompt user for input directory path
+echo "Enter the directory path:"
+read directory_path
 
-# Define backup directory
-backup_dir="/var/log/backups"
+# Check if directory exists
+if [ ! -d "$directory_path" ]; then
+    echo "Directory does not exist. Would you like to create it? (y/n):"
+    read create_dir_choice
 
-# Ensure backup directory exists
-sudo mkdir -p "$backup_dir"
+    if [ "$create_dir_choice" = "y" ]; then
+        mkdir -p "$directory_path" || { echo "Failed to create directory. Exiting..."; exit 1; }
+    else
+        echo "Exiting..."
+        exit 1
+    fi
+fi
 
- # Compress and backup log files with timestamp
-timestamp=$(date +%Y%m%d%H%M%S)
-sudo gzip -c /var/log/syslog >"$backup_dir/syslog-$timestamp.zip"
-sudo gzip -c /var/log/wtmp > "$backup_dir/wtmp-$timestamp.zip"
+# Prompt user for input permissions number
+echo "Enter the chmod permissions number: (e.g 777):"
+read permissions
 
-# Clearing log files
-echo "Clearing log files..."
-truncate -s 0 /var/log/syslog
-truncate -s 0 /var/log/wtmp
+# CD to the directory
+cd "$directory_path"
 
-# Print compressed file sizes
-echo "Compressed file sizes:"
-echo "Size of $backup_dir/syslog-$timestamp.zip"
-du -h "$backup_dir/syslog-$timestamp.zip"
-echo "Size of $backup_dir/wtmp-$timestamp.zip"
-du -h "$backup_dir/wtmp-$timestamp.zip"
+# Change permissions for all the files in the directory
+chmod -R "$permissions" .
 
-# Compare sizes
-original_syslog_size=$(stat -c %s /var/log/syslog)
-compressed_syslog_size=$(stat -c %s "$backup_dir/syslog-$timestamp.zip")
-original_wtmp_size=$(stat -c %s /var/log/wtmp)
-compressed_wtmp_size=$(stat -c %s "$backup_dir/wtmp-$timestamp.zip")
+# Print directory contents and new permissions
+echo "Directory contents and new permissions settings:"
+ls -l
 
-echo "Comparison of file sizes:"
-echo "Original syslog size: $original_syslog_size bytes"
-echo "Compressed syslog size: $compressed_syslog_size bytes"
-echo "Original wtmp size: $compressed_wtmp_size bytes"
-echo "Compressed wtmp size $compressed_wtmp_size bytes"
-
-#End
-
+# End
 
 
 

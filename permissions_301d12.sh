@@ -19,3 +19,5 @@ chmod -R "$permissions" "$directory_path"
 # Print directory contents and new permission settings
 echo "Directory contents:"
 ls -l "$directory_path"
+
+# End
