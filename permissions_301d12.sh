@@ -2,7 +2,8 @@
 
 # Script Name: permissions_301d12.sh
 # Author: Justin Patterson
-# Date of latest revision: 03/26/2024
+# Date of latest revision: 03/27/2024
+# Ops Challenge #: Seattle-Ops-301d12 Ops Challenge 03
 # Purpose: change permissions
 
 # Prompt user for input directory path
