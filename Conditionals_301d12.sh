@@ -1,8 +1,9 @@
 #!/bin/bash
 
-# Script Name: Conditionals_301w10.sh
+# Script Name: Conditionals_301d12.sh
 # Author: Justin Patterson
-# Date of latest revision: 02/23/2024
+# Date of latest revision: 03/28/2024
+# Ops Challenge #: Seattle-Ops-301d12 Ops Challenge 04
 # Purpose: Launch system menu
 
 while true; do
