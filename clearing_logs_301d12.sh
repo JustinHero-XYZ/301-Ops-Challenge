@@ -1,42 +1,47 @@
 #!/bin/bash
 
-# Script Name: clearing_logs_301w10.sh
+# Script Name: clearing_logs_301d12.sh
 # Author: Justin Patterson
-# Date of latest revision: 02/27/2024
+# Date of latest revision: 03/29/2024
+# Ops Challenge #: Seattle-Ops-301d12 Ops Challenge 05
 # Purpose: Clearing Logs
 
-# Prompt user for input directory path
-echo "Enter the directory path:"
-read directory_path
+# Define the backup directory
+backup_dir="backups"
 
-# Check if directory exists
-if [ ! -d "$directory_path" ]; then
-    echo "Directory does not exist. Would you like to create it? (y/n):"
-    read create_dir_choice
+# Create the backup directory if it doesn't exist
+mkdir -p "$backup_dir"
 
-    if [ "$create_dir_choice" = "y" ]; then
-        mkdir -p "$directory_path" || { echo "Failed to create directory. Exiting..."; exit 1; }
-    else
-        echo "Exiting..."
-        exit 1
-    fi
-fi
+# Get the current timestamp
+timestamp=$(date +"%Y-%m-%d %H%M%S")
 
-# Prompt user for input permissions number
-echo "Enter the chmod permissions number: (e.g 777):"
-read permissions
+# Array of log files to process
+log_files=(/var/log/syslog /var/log/wtmp)
 
-# CD to the directory
-cd "$directory_path"
+# Loop through each log file
+for logfile in "${log_files[@]}"; do
+    # Print file size before compression
+    echo "File size of $logfile before compression:"
+    du -sh "$logfile"
 
-# Change permissions for all the files in the directory
-chmod -R "$permissions" .
+    # Compress the log file to the backup directory with timestamp
+    sudo gzip -c "$logfile" > "$backup_dir/$(basename "$logfile")-$timestamp.gz"
 
-# Print directory contents and new permissions
-echo "Directory contents and new permissions settings:"
-ls -l
+    # Clear the contents of the log file
+    sudo sh -c "cat /dev/null > $logfile"
 
-# End
+    # Print file size after compression
+    echo "File size of $(basename "$logfile") after compression:"
+    du -sh "$backup_dir/$(basename "$logfile")-$timestamp.gz"
+done
 
+# Compare the sizes of original log files and compressed files
+echo "Comparison of file sizes:"
+for logfile in "${log_files[@]}"; do
+    original_size=$(stat --format=%s "$logfile")
+    compressed_size=$(stat --format=%s "$backup_dir/$(basename "$logfile")-$timestamp.gz")
+    echo "Original $(basename "$logfile") size: $original_size"
+    echo "Compressed $(basename "$logfile") size: $compressed_size"
+done
 
-
+#End
