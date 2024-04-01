@@ -25,3 +25,5 @@ os.system(command2)
 # Execute 'lshw -short' command
 print("n\Output of 'lshw -short' command:")
 os.system(command3)
+
+# End
