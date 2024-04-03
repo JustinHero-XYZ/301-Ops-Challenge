@@ -31,6 +31,4 @@ my_list[6] = "onion"
 ### Print the modified list
 print("Modified list:", my_list)
 
-### Pass the variable into the function here
-
 # End
