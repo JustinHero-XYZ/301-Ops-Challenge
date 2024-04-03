@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
 # Author: Justin Patterson
-# Date last revised: 03/07/2024
-# Ops Challenge #: Seattle-Ops-301w10 Ops Challenge 10
+# Date last revised: 04/03/2024
+# Ops Challenge #: Seattle-Ops-301d12 Ops Challenge 10
 # Purpose: File handling operations in Python
-# Script Name: file_handling_301w10.py
+# Script Name: file_handling_301d12.py
 
 # Import libraries
 import os
