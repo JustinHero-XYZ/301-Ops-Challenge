@@ -22,7 +22,7 @@ print("Entire list:", my_list)
 ### Print the fourth element of the list
 print("Fourth element:", my_list[3])
 
-### Print the sixth element of the list
+### Print the sixth through tenth element of the list
 print("Sixth through tenth elements:", my_list[5:])
 
 ### Change the value of the seventh element to "onion"
