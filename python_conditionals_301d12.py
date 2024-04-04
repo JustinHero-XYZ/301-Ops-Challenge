@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
 # Author: Justin Patterson
-# Date last revised: 03/07/2024
-# Ops Challenge #: Seattle-Ops-301w10 Ops Challenge 09
+# Date last revised: 04/04/2024
+# Ops Challenge #: Seattle-Ops-301d12 Ops Challenge 09
 # Purpose: Create if statements using the logical conditionals below
-# Script Name: python_conditionals_301w10.py
+# Script Name: python_conditionals_301d12.py
 
 #Equals: a == b
 #Not Equals: a != b
