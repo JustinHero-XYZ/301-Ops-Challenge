@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
 # Author: Justin Patterson
-# Date last revised: 03/12/2024
-# Ops Challenge #: Seattle-Ops-301w10 Ops Challenge 11
+# Date last revised: 04/08/2024
+# Ops Challenge #: Seattle-Ops-301d12 Ops Challenge 11
 # Purpose: Create python script that fetches info using Psutil
-# Script Name: psutil_301w10.py
+# Script Name: psutil_301d12.py
 
 # Import libraries
 import psutil
