@@ -1,10 +1,10 @@
 #!/usr/bin/python3
 
 # Author: Mr. Robot
-# Date last revised: 03/15/2024
-# Ops Challenge #: Seattle-Ops-301w10 Ops Challenge 14
+# Date last revised: 04/09/2024
+# Ops Challenge #: Seattle-Ops-301d12 Ops Challenge 12
 # Purpose: Python malware script analysis
-# Script Name: malware_analysis_301w10.py
+# Script Name: malware_analysis_301d12.py
 
 ###All lines with '###' are part of the script analysis and not the script itself
 
