@@ -1,10 +1,10 @@
 #!/usr/bin/env python3
 
 # Author: Justin Patterson
-# Date last revised: 03/13/2024
-# Ops Challenge #: Seattle-Ops-301w10 Ops Challenge 12
+# Date last revised: 04/09/2024
+# Ops Challenge #: Seattle-Ops-301d12 Ops Challenge 12
 # Purpose: Perform HTTP request based on user input
-# Script Name: http_request_301w10.py
+# Script Name: http_request_301d12.py
 
 # Import libraries
 import requests
